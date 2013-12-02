@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lead.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @lead.lastname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @lead.email %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @lead.company %>
+</p>
+
+<p>
+  <strong>Jobtitle:</strong>
+  <%= @lead.jobtitle %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @lead.phone %>
+</p>
+
+<p>
+  <strong>Webstie:</strong>
+  <%= @lead.webstie %>
+</p>
+
+
+<a href='https://crm.zoho.com/crm/private/xml/Leads/insertRecords?authtoken=82a2c9cd516695ee93a8c04988eb04ec&scope=crmapi&xmlData=<Leads><row no="1"><FL%20val="Company"><%= @lead.company %></FL><FL%20val="First Name"><%= @lead.name %></FL><FL%20val="Last Name"><%= @lead.lastname %></FL><FL%20val="Email"><%= @lead.email %></FL><FL%20val="Title"><%= @lead.jobtitle %></FL><FL%20val="Phone"><%= @lead.phone %></FL><FL%20val="Website"><%= @lead.webstie %></FL></row></Leads>' ><b>Confirm  </b></a>
+
+
+<%= link_to 'Edit', edit_lead_path(@lead) %> |
+<%= link_to 'Back', leads_path %>
